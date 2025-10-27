@@ -16,8 +16,8 @@ p {
   }
   
   body { 
-    color:#212121;
-    background-color:white;
+    color:#fafafa;
+    background-color:#212121;
   }
   
   .intro {
@@ -66,12 +66,12 @@ p {
   }
   
   .skills-list li {
-    background-color: #000000;
+    background-color: #212121;
     padding: 10px 20px;
     border-radius: 50px;
     font-size: 14px;
-    color: #FFFFFF;
-    border: 1px solid #ccc;
+    color: #fafafa;
+    border: 1.5px solid #fafafa;
   }
   
   
