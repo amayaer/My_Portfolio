@@ -145,10 +145,11 @@ p {
   
   
   .project-section {
-    display: flex;
+    display: grid;
+    grid-template-colums: repeat(auto-fit, minmax(300px, 1fr)); 
     justify-content: center;
     align-items: center;
-    gap: 90px; 
+    gap: 2rem; 
     margin-top: 0px;
     padding-bottom: 90px;
   }
@@ -161,7 +162,7 @@ p {
   }
   
   .title {
-    display:flex;
+    display: flex;
     background-color: #F98BB9;
     width: 310px;
     height: 320px;
