@@ -10,7 +10,6 @@ h3 {
 
 .container {
   margin: auto;
-  margin: 0;
 }
 
 body {
@@ -83,7 +82,7 @@ body {
 }
 
 .top-section {
-  positon: relative;
+  position: relative;
   background-color: #4158d0;
   background: linear-gradient(
     45deg,
