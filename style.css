@@ -99,7 +99,7 @@ body {
 }
 
 .bio h1 {
-  padding: 0 1rem 0 9rem;
+  padding: 1rem 1rem 0 10rem;
   word-wrap: break-word;
   font-weight: 200;
   font-size: 29px;
@@ -107,7 +107,7 @@ body {
 }
 
 .bio p {
-  padding: 1rem 2rem 0 2rem;
+  padding: 1rem 2rem 0.3 2rem;
   word-wrap: break-word;
   font-weight: 100;
   font-size: 18px;
