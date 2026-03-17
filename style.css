@@ -102,7 +102,8 @@ body {
   padding: 0 1rem 0 9rem;
   word-wrap: break-word;
   font-weight: 200;
-  font-size: 27px;
+  font-size: 29px;
+  margin-top: 0.3rem;
 }
 
 .bio p {
@@ -110,6 +111,7 @@ body {
   word-wrap: break-word;
   font-weight: 100;
   font-size: 18px;
+  margin-top:0;
 }
 
 .about-me p,
@@ -117,6 +119,9 @@ body {
   font-size: 18px;
   font-weight: 100;
 }
+
+.about-me p {
+  padding-top: 1rem;
 
 .programming {
   background-color: rgb(243, 243, 243);
@@ -138,11 +143,8 @@ body {
   height: auto;
 }
 
-.school-section img {
-}
-
 .bottom-text {
-  margin: 2.3rem 0 0 0.7rem;
+  margin: 2.3rem 0 0 0.5rem;
 }
 
 .bottom-text p {
@@ -375,6 +377,8 @@ html {
 .project-pic1 img:hover,
 .project-pic2 img:hover {
   cursor: pointer;
+  transform: scale(1.01);
+  transition: transform 0.3s;
 }
 
 .icon-box:hover,
@@ -415,3 +419,11 @@ html {
     bottom: 50%;
   }
 }
+
+@media (max-width: 1100px) {
+  .icon-box1,
+  .icon-box2 {
+    margin-left: 0.5rem;
+  }
+}
+
