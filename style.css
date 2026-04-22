@@ -75,8 +75,9 @@ body {
 .intro img {
   position: absolute;
   height: auto;
-  width: 140px;
-  top: 12%;
+  width: 130px;
+  top: 30%;
+  margin-left: 1rem;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
   flex-shrink: 0;
 }
