@@ -10,17 +10,13 @@ h3 {
 
 .container {
   margin: auto;
+  max-width: clamp(320px, 90vw, 1600px);
+  margin-inline: auto;
 }
 
 body {
   color: #212121;
   background-color: #fafafa;
-}
-
-.education,
-.programming,
-.selected-work {
-  margin: 0 4rem;
 }
 
 .about-me h2,
@@ -34,11 +30,17 @@ body {
 
 .intro-about-me-education {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   margin-top: 3rem;
   gap: 20px;
   align-items: center;
   justify-items: center;
+}
+
+.intro-about-me-education > * {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
 }
 
 .box-name {
@@ -55,10 +57,6 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1rem 2rem 2rem 2rem;
   box-sizing: border-box;
-  margin-left: 0;
-  max-width: 450px;
-  min-width: 390px;
-  max-height: 300px;
 }
 
 .intro {
@@ -66,10 +64,7 @@ body {
   grid-template-rows: 1fr 1fr;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  margin-left: 4rem;
   overflow: hidden;
-  max-width: 450px;
-  max-height: 300px;
 }
 
 .intro img {
@@ -100,7 +95,7 @@ body {
 }
 
 .bio h1 {
-  padding: 1rem 1rem 0 9.7rem;
+  padding: 1rem 1rem 0 10rem;
   word-wrap: break-word;
   font-weight: 200;
   font-size: 29px;
@@ -119,10 +114,6 @@ body {
 .education p {
   font-size: 18px;
   font-weight: 100;
-}
-
-.about-me p {
-  padding-top: 1rem;
 }
 
 .programming {
@@ -248,7 +239,7 @@ html {
   font-size: 20px;
   font-weight: 100;
   background-color: rgb(243, 243, 243);
-  margin: 5rem 0 1rem 4rem;
+  margin: 5rem 0 1rem 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding-right: 1rem;
@@ -258,7 +249,6 @@ html {
 .project-section {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding: 0 4rem 4rem 4rem;
   gap: 30px;
 }
 
@@ -351,31 +341,41 @@ html {
 .live-site {
   border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+.project-pic1,
+.project-pic2 {
+  border-radius: 12px;
+  height: clamp(300px, 50vw, 600px);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
 .project-pic1 {
   background-color: rgb(228, 255, 214);
-  border-radius: 12px;
-  height: 600px;
 }
 
 .project-pic2 {
   background-color: rgb(241, 230, 252);
-  border-radius: 12px;
-  height: 600px;
 }
+
 .project-pic1 img,
 .project-pic2 img {
+  position: absolute;
   width: 80%;
   height: 70%;
-  object-fit: contain;
-  padding: 5rem 2rem 1rem 5rem;
+  will-change: transform;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s;
+  max-width: 750px;
 }
 
 .project-pic1 img:hover,
 .project-pic2 img:hover {
   cursor: pointer;
-  transform: scale(1.01);
-  transition: transform 0.3s;
+  transform: translate(-50%,-50%) scale(1.01);
 }
 
 .icon-box:hover,
@@ -393,18 +393,28 @@ html {
   }
 }
 
-@media (max-width: 1270px) {
-  .education {
-    margin-left: 7rem;
+@media (max-width: 850px) {
+  .intro img {
+    top: 10%;
   }
 }
 
-@media (max-width: 850px) {
-  .about-me {
-    margin-left: 4rem;
+@media (max-width: 500px) {
+  .intro-about-me-education {
+    margin-top: 3rem;
   }
-  .intro img {
-    top: 5%;
+
+  .about-me p {
+    padding-top: 0rem;
+  }
+
+  .bio h1 {
+    padding-right: 0;
+    font-size: 27px;
+  }
+
+  .navigation {
+    font-size: 9px;
   }
 }
 
